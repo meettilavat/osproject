@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Level Queue</title>
+    <link rel="stylesheet" href="styleop.css">
+    <nav class="mnav">
+        <ul class="navb">
+            <li class="nav-item"><a class="logo" href="index.html">CPU Scheduling</a></li>
+            <li class="nav-item"><a class="skinb" href="fcfs.html">FCFS</a></li>
+            <li class="nav-item"><a class="skinb" href="srtf.html">SRTF</a></li>
+            <li class="nav-item"><a class="skinb" href="pbs.html">PBS</a></li>
+            <li class="nav-item"><a class="skinb" href="rr.html">RR</a></li>
+            <li class="nav-item"><a class="skinb" href="sjf.html">SJF</a></li>
+            <li class="nav-item"><a class="skinb" href="mlq.html">MQL</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+<div class="snapiboi">
+    <div class="content">
+        <div class="contt">
+            <h1>What is Multiple-Level Queues Scheduling?</h1>
+            <p>This algorithm separates the ready queue into various separate queues. In this method, processes are assigned to a queue based on a specific property of the process, like the process priority, size of the memory, etc.</p>
+            <p>However, this is not an independent scheduling OS algorithm as it needs to use other types of algorithms in order to schedule the jobs.</p>
+            <h1>Characteristics of Multiple-Level Queues Scheduling</h1>
+            <ul class="list">
+                <li>Multiple queues should be maintained for processes with some characteristics.</li>
+                <li>Every queue may have its separate scheduling algorithms.</li>
+                <li>Priorities are given for each queue.</li>
+            </ul>
+            <h1>Advantages</h1>
+            <ul class="list">
+                <li>The processes are permanently assigned to the queue, so it has advantage of low scheduling overhead.</li>
+            </ul>
+            <h1>Disadvantages</h1>
+            <ul class="list">
+                <li>Some processes may starve for CPU if some higher priority queues are never becoming empty.</li>
+                <li>It is inflexible in nature.</li>
+            </ul>
+            <a class="btn btn--stripe algob cent" href="fcfssim.html">Simulate</a>
+        </div>
+    </div>
+    <div class="seprater"></div>
+    <nav class="foot">OS Project</nav>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Remaining Time First</title>
+    <link rel="stylesheet" href="styleop.css">
+    <nav class="mnav">
+        <ul class="navb">
+            <li><a class="logo" href="index.html">CPU Scheduling</a></li>
+            <li><a class="skinb" href="fcfs.html">FCFS</a></li>
+            <li><a class="skinb" href="srtf.html">SRTF</a></li>
+            <li><a class="skinb" href="pbs.html">PBS</a></li>
+            <li><a class="skinb" href="rr.html">RR</a></li>
+            <li><a class="skinb" href="sjf.html">SJF</a></li>
+            <li><a class="skinb" href="mlq.html">MQL</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+<div class="snapiboi">
+    <div class="content">
+        <div class="contt">
+            <h1>What is Shortest Remaining Time First Method?</h1>
+            <p><b>Shortest Remaining Time First (SRTF)</b> is the preemptive version of Shortest Job Next (SJN) algorithm, where the processor is allocated to the job closest to completion.</p>
+            <p>This algorithm requires advanced concept and knowledge of CPU time required to process the job in an interactive system, and hence can’t be implemented there. But, in a batch system where it is desirable to give preference to short jobs, SRT algorithm is used.</p>
+            <p>However, SRT involves more overheads than SJN, as the OS is required to frequently monitor the CPU time of the jobs in the READY queue and perform context switching. </p>
+            <h1>Characteristics of FCFS Scheduling</h1>
+            <ul class="list">
+                <li>It supports non-preemptive and pre-emptive scheduling algorithm.</li>
+                <li>Jobs are always executed on a first-come, first-serve basis.</li>
+                <li>It is easy to implement and use.</li>
+                <li>This method is poor in performance, and the general wait time is quite high.</li>
+            </ul>
+            <h1>Advantages</h1>
+            <ul class="list">
+                <li>Many processes execute in less amount of time. So, throughput is increased.</li>
+                <li>Processes which have short burst time run fast.</li>
+            </ul>
+            <h1>Disadvantages</h1>
+            <ul class="list">
+                <li>Practically it is not possible to predict the burst time.</li>
+                <li>Processes which have long burst time will have to wait for long time for execution.</li>
+            </ul>
+            <a class="btn btn--stripe algob cent" href="fcfssim.html">Simulate</a>
+        </div>
+    </div>
+    <div class="seprater"></div>
+    <nav class="foot">OS Project</nav>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Come First Serve</title>
+    <link rel="stylesheet" href="styleop.css">
+    <nav class="mnav">
+        <ul class="navb">
+            <li><a class="logo" href="index.html">CPU Scheduling</a></li>
+            <li><a class="skinb" href="fcfs.html">FCFS</a></li>
+            <!-- <li><a class="skinb" href="srtf.html">SRTF</a></li> -->
+            <li><a class="skinb" href="pbs.html">PBS</a></li>
+            <li><a class="skinb" href="rr.html">RR</a></li>
+            <li><a class="skinb" href="sjf.html">SJF</a></li>
+            <!-- <li><a class="skinb" href="mlq.html">MQL</a></li> -->
+        </ul>
+    </nav>
+</head>
+<body>
+<div class="snapiboi">
+    <div class="content">
+        <div class="contt">
+            <h1>What is First Come First Serve Method?</h1>
+            <p><b>First Come First Serve (FCFS)</b> is an operating system scheduling algorithm that automatically executes queued requests and processes in order of their arrival. It is the easiest and simplest CPU scheduling algorithm. In this type of algorithm, processes which requests the CPU first get the CPU allocation first. This is managed with a FIFO queue. The full form of FCFS is First Come First Serve.</p>
+            <p>As the process enters the ready queue, its PCB (Process Control Block) is linked with the tail of the queue and, when the CPU becomes free, it should be assigned to the process at the beginning of the queue. </p>
+            <h1>Characteristics of FCFS Scheduling</h1>
+            <ul class="list">
+                <li>It supports non-preemptive and pre-emptive scheduling algorithm.</li>
+                <li>Jobs are always executed on a first-come, first-serve basis.</li>
+                <li>It is easy to implement and use.</li>
+                <li>This method is poor in performance, and the general wait time is quite high.</li>
+            </ul>
+            <h1>Advantages</h1>
+            <ul class="list">
+                <li>The simplest form of a CPU scheduling algorithm </li>
+                <li>Easy to program</li>
+                <li>First come first served </li>
+            </ul>
+            <h1>Disadvantages</h1>
+            <ul class="list">
+                <li>It is a Non-Preemptive CPU scheduling algorithm, so after the process has been allocated to the CPU, it will never release the CPU until it finishes executing.</li>
+                <li>The Average Waiting Time is high.</li>
+                <li>Short processes that are at the back of the queue have to wait for the long process at the front to finish.</li>
+                <li>Not an ideal technique for time-sharing systems.</li>
+                <li>Because of its simplicity, FCFS is not very efficient.</li>
+            </ul>
+            <h1>Algorithm</h1>
+            <div class="algoc cent" style="width: auto!important; text-align: justify">
+                <ul class="list">
+                    <li>Step 1 : Input the number of processes required to be scheduled using FCFS, burst time for each process and its arrival time.</li>
+                    <li>Step 2 : Using enhanced bubble sort technique, sort the all given processes in ascending order according to arrival time in a ready queue.</li>
+                    <li>Step 3 : Calculate the Finish Time, Turn Around Time and Waiting Time for each process which in turn help to calculate Average Waiting Time and Average Turn Around Time required by CPU to schedule given set of process using FCFS. </li>
+                    <ul class="list">
+                        <li>Step 3.1 : for i = 0 , Finish Time T<sub>0</sub> = Arrival Time T<sub>0</sub> + Burst Time T<sub>0</sub></li>
+                        <li>Step 3.2 : for i >= 1, Finish Time T<sub>i</sub> = Burst Time T<sub>i</sub> + Finish Time T<sub>i</sub>- 1 </li>
+                        <li>Step 3.3 : for i = 0 , Turn Around Time T<sub>0</sub> = Finish Time T<sub>0</sub> - Arrival Time T<sub>0</sub></li>
+                        <li>Step 3.4 : for i >= 1, Turn Around Time T<sub>i</sub> = Finish Time T<sub>i</sub> - Arrival Time T<sub>i</sub></li>
+                        <li>Step 3.5 : for i = 0 , Waiting Time T<sub>0</sub> = Turn Around Time T<sub>0</sub> - Burst Time T<sub>0</sub></li>
+                        <li>Step 3.6 : for i >= 1, Waiting Time T<sub>i</sub> = Turn Around Time T<sub>i</sub> - Burst Time T<sub>i</sub>- 1 </li>
+                    </ul>
+                    <li>Step 4 : Process with less arrival time comes first and gets scheduled first by the CPU.</li>
+                    <li>Step 5 : Calculate the Average Waiting Time and Average Turn Around Time.</li>
+                    <li>Step 6 : Stop.</li>
+                </ul>
+            </div>
+            <a class="btn btn--stripe algob cent" href="fcfssim.html">Simulate</a>
+        </div>
+    </div>
+    <div class="seprater"></div>
+    <nav class="foot">OS Project</nav>
+</body>
+</html>

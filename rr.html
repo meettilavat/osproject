@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Robin</title>
+    <link rel="stylesheet" href="styleop.css">
+    <nav class="mnav">
+        <ul class="navb">
+            <li><a class="logo" href="index.html">CPU Scheduling</a></li>
+            <li><a class="skinb" href="fcfs.html">FCFS</a></li>
+            <li><a class="skinb" href="srtf.html">SRTF</a></li>
+            <li><a class="skinb" href="pbs.html">PBS</a></li>
+            <li><a class="skinb" href="rr.html">RR</a></li>
+            <li><a class="skinb" href="sjf.html">SJF</a></li>
+            <li><a class="skinb" href="mlq.html">MQL</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+<div class="snapiboi">
+    <div class="content">
+        <div class="contt">
+            <h1>What is Round Robin?</h1>
+            <p>The name of this algorithm comes from the round-robin principle, where each person gets an equal share of something in turns. It is the oldest, simplest scheduling algorithm, which is mostly used for multitasking.</p>
+            <p>In Round-robin scheduling, each ready task runs turn by turn only in a cyclic queue for a limited time slice. This algorithm also offers starvation free execution of processes.</p>
+            <h1>Characteristics of Priority Scheduling</h1>
+            <ul class="list">
+                <li>Round robin is a pre-emptive algorithm</li>
+                <li>The CPU is shifted to the next process after fixed interval time, which is called time quantum/time slice.</li>
+                <li>The process that is preempted is added to the end of the queue.</li>
+                <li>Round robin is a hybrid model which is clock-driven</li>
+                <li>Time slice should be minimum, which is assigned for a specific task that needs to be processed. However, it may differ OS to OS.</li>
+                <li>It is a real time algorithm which responds to the event within a specific time limit.</li>
+                <li>Round robin is one of the oldest, fairest, and easiest algorithm.</li>
+                <li>Widely used scheduling method in traditional OS.</li>
+            </ul>
+            <h1>Advantages</h1>
+            <ul class="list">
+                <li>It doesn’t face the issues of starvation or convoy effect.</li>
+                <li>All the jobs get a fair allocation of CPU.</li>
+                <li>It deals with all process without any priority</li>
+                <li>If you know the total number of processes on the run queue, then you can also assume the worst-case response time for the same process.</li>
+                <li>This scheduling method does not depend upon burst time. That’s why it is easily implementable on the system.</li>
+                <li>Once a process is executed for a specific set of the period, the process is preempted, and another process executes for that given time period.</li>
+                <li>Allows OS to use the Context switching method to save states of preempted processes.</li>
+                <li>It gives the best performance in terms of average response time.</li>
+            </ul>
+            <h1>Disadvantages</h1>
+            <ul class="list">
+                <li>If slicing time of OS is low, the processor output will be reduced.</li>
+                <li>This method spends more time on context switching</li>
+                <li>Its performance heavily depends on time quantum.</li>
+                <li>Priorities cannot be set for the processes.</li>
+                <li>Round-robin scheduling doesn’t give special priority to more important tasks.</li>
+                <li>Decreases comprehension</li>
+                <li>Lower time quantum results in higher the context switching overhead in the system.</li>
+                <li>Finding a correct time quantum is a quite difficult task in this system.</li>
+            </ul>
+            <h1>Algorithm</h1>
+            <div class="algoc cent" style="width: auto!important; text-align: justify">
+                <ul class="list">
+                    <li>Create an array of arrival time ar_time[] which keeps track of arrival time of process Pi</li>
+                    <li>Create another array of burst time br_time[] which keeps track of remaining burst time</li>
+                    <li>Initialize CPU time to 0; t = 0</li>
+                    <li>Repeat these steps until ready queue is empty
+                        <ul>
+                            <li>if br_time[i] > quantum, t = t + quantum, br_time[i] -= quantum</li>
+                            <li>else t = t + br_time[i], br_time = 0</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <a class="btn btn--stripe algob cent" href="rrsim.html">Simulate</a>
+        </div>
+    </div>
+    <div class="seprater"></div>
+    <nav class="foot">OS Project</nav>
+</body>
+</html>

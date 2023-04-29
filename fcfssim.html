@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>First Come First Serve Simulation</title>
+    <link rel="stylesheet" href="styleop.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+<nav class="mnav" style="height: 6vh">
+    <ul class="navb" style="vertical-align: middle">
+        <li><a class="logo" href="index.html">CPU Scheduling</a></li>
+        <li><a class="skinb" href="fcfs.html">FCFS</a></li>
+        <li><a class="skinb" href="srtf.html">SRTF</a></li>
+        <li><a class="skinb" href="pbs.html">PBS</a></li>
+        <li><a class="skinb" href="rr.html">RR</a></li>
+        <li><a class="skinb" href="sjf.html">SJF</a></li>
+        <li><a class="skinb" href="mlq.html">MQL</a></li>
+    </ul>
+</nav>
+<div class="snapiboi">
+    <div class="content">
+        <div class="contt">
+            <h1 class="cent">First Come First Serve Simulation</h1>
+            <div class="addp">
+                <div id="err" class="">
+                    <div class="form">
+                        <input onfocusout="proval()" id="pro" type="text" name="name" autocomplete="off" required/>
+                        <label id="lab" for="pro" class="label-name"> <span class="content-name" id="con">Number of Processes</span> </label>
+                    </div> <span id="error">Input value between '1' and '10'</span> </div>
+                <button class="btn mar disabled" onclick="fcfs()" href="fcfssim.html" id="set" disabled="disabled">Add Processes</button>
+                <button class="btn mar disabled" onclick="removeProcesses()" id="reset">Reset</button>
+            </div>
+            <div id="data">
+                <table id="tab"> </table>
+                <div id="datab"> </div>
+                <div id="gantt">
+                    <div id="chart"> </div>
+                    <div id="label"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="seprater"></div>
+<nav class="foot">OS Project</nav>
+<script type="text/javascript" src="common.js"></script>
+</body>
+
+</html>
